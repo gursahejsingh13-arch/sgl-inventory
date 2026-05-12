@@ -1,0 +1,338 @@
+# Signalist Stock Tracker App - Package Requirements
+# Installation: npm install
+
+# ============================================
+# CORE DEPENDENCIES
+# ============================================
+
+# Next.js Framework (v15.5.2)
+# - React-based framework for production-ready applications
+# - Includes: Server-side rendering, static site generation, API routes
+# - Built-in: App Router, Image optimization, Font optimization
+next@15.5.2
+
+# React (v19.1.0)
+# - JavaScript library for building user interfaces
+# - Component-based architecture
+react@19.1.0
+react-dom@19.1.0
+
+# TypeScript (v5+)
+# - Typed superset of JavaScript
+# - Enables type safety and better IDE support
+typescript@^5
+
+
+# ============================================
+# UI COMPONENTS & STYLING
+# ============================================
+
+# Radix UI Components
+# - Accessible, unstyled UI components
+@radix-ui/react-avatar@^1.1.10        # User avatar components
+@radix-ui/react-dialog@^1.1.15        # Modal dialogs
+@radix-ui/react-dropdown-menu@^2.1.16 # Dropdown menus
+@radix-ui/react-label@^2.1.7          # Form labels
+@radix-ui/react-popover@^1.1.15       # Popover overlays
+@radix-ui/react-select@^2.2.6         # Custom select inputs
+@radix-ui/react-slot@^1.2.3           # Component composition utility
+
+# TailwindCSS (v4)
+# - Utility-first CSS framework
+# - Includes: JIT compiler, responsive design utilities
+tailwindcss@^4
+@tailwindcss/postcss@^4
+postcss.config.mjs                     # PostCSS configuration
+
+# CSS Utilities
+class-variance-authority@^0.7.1        # Type-safe CSS variant management
+clsx@^2.1.1                            # Conditional className utility
+tailwind-merge@^3.3.1                  # Merge Tailwind classes intelligently
+tw-animate-css@^1.3.7                  # TailwindCSS animation utilities
+
+# Icons
+lucide-react@^0.542.0                  # Beautiful icon library
+
+# Theme Management
+next-themes@^0.4.6                     # Dark mode & theme switching
+
+# Toast Notifications
+sonner@^2.0.7                          # Beautiful toast notifications
+
+# Command Palette
+cmdk@^1.1.1                            # Command menu component (for search)
+
+
+# ============================================
+# AUTHENTICATION
+# ============================================
+
+# Better Auth (v1.3.7)
+# - Framework-agnostic authentication library
+# - Features: Email/password, sessions, social auth support
+better-auth@^1.3.7
+
+
+# ============================================
+# DATABASE
+# ============================================
+
+# MongoDB (v6.19.0)
+# - Official MongoDB Node.js driver
+# - NoSQL document database
+mongodb@^6.19.0
+
+# Mongoose (v8.18.0)
+# - MongoDB object modeling (ODM)
+# - Features: Schema validation, query building, middleware
+mongoose@^8.18.0
+
+
+# ============================================
+# EVENT-DRIVEN WORKFLOWS
+# ============================================
+
+# Inngest (v3.40.1)
+# - Event-driven workflow platform
+# - Features: Background jobs, cron scheduling, AI integration
+# - Enables: Automated alerts, email workflows, AI-powered tasks
+inngest@^3.40.1
+
+
+# ============================================
+# EMAIL SERVICE
+# ============================================
+
+# Nodemailer (v7.0.6)
+# - Email sending library
+# - Supports: SMTP, Gmail, OAuth2, HTML templates
+nodemailer@^7.0.6
+
+
+# ============================================
+# FORM HANDLING
+# ============================================
+
+# React Hook Form (v7.62.0)
+# - Performant form validation library
+# - Features: Schema validation, error handling
+react-hook-form@^7.62.0
+
+# Country Selection
+react-select-country-list@^2.2.3       # Country dropdown with flags
+
+
+# ============================================
+# UTILITIES
+# ============================================
+
+# Environment Variables
+dotenv@^16.4.5                         # Load environment variables from .env
+
+
+# ============================================
+# DEVELOPMENT DEPENDENCIES
+# ============================================
+
+# TypeScript Type Definitions
+@types/node@^20                        # Node.js type definitions
+@types/react@^19                       # React type definitions
+@types/react-dom@^19                   # React DOM type definitions
+@types/nodemailer@^7.0.1               # Nodemailer type definitions
+@types/react-select-country-list@^2.2.3 # Country list type definitions
+
+# Linting
+eslint@^9                              # JavaScript linting tool
+@eslint/eslintrc@^3                    # ESLint configuration
+eslint-config-next@15.5.2              # Next.js ESLint configuration
+
+# TypeScript Execution
+ts-node@^10.9.2                        # Run TypeScript files directly
+
+
+# ============================================
+# EXTERNAL API INTEGRATIONS
+# ============================================
+
+# NOTE: These services require API keys (no npm packages needed)
+
+# Finnhub API
+# - Financial data provider
+# - Endpoints: Stock search, quotes, company profiles, news
+# - Website: https://finnhub.io
+# - Get API Key: https://finnhub.io/register
+# - Rate Limit: 60 calls/minute (free tier)
+
+# Gemini AI (Google)
+# - Large language model for content generation
+# - Used for: Welcome emails, news summaries
+# - Website: https://ai.google.dev
+# - Get API Key: https://aistudio.google.com
+
+# TradingView Widgets
+# - Financial charts and market data
+# - No API key required (embedded widgets)
+# - Website: https://www.tradingview.com/widget/
+
+
+# ============================================
+# INSTALLATION INSTRUCTIONS
+# ============================================
+
+# Step 1: Install all dependencies
+# npm install
+
+# Step 2: Install specific package
+# npm install <package-name>
+
+# Step 3: Install Shadcn UI components (if needed)
+# npx shadcn@latest add button dialog dropdown-menu command input label popover select avatar sonner
+
+# Step 4: Development server
+# npm run dev
+
+# Step 5: Production build
+# npm run build
+# npm start
+
+
+# ============================================
+# PACKAGE.JSON SCRIPTS
+# ============================================
+
+# "dev": "next dev --turbopack"
+# - Start development server with Turbopack bundler
+# - Runs on: http://localhost:3000
+# - Hot reload enabled
+
+# "build": "next build --turbopack"
+# - Build production-optimized bundle
+# - Output: .next/ directory
+
+# "start": "next start"
+# - Start production server (after build)
+
+# "lint": "eslint"
+# - Run ESLint to check code quality
+
+# "test:db": "node scripts/test-db.mjs"
+# - Test MongoDB database connection
+
+
+# ============================================
+# MINIMUM NODE VERSION
+# ============================================
+
+# Node.js: v20.0.0 or higher
+# npm: v10.0.0 or higher
+
+
+# ============================================
+# ADDITIONAL SETUP REQUIRED
+# ============================================
+
+# 1. MongoDB Atlas Account
+#    - Create cluster at: https://www.mongodb.com/cloud/atlas
+#    - Get connection string
+#    - Add to .env as MONGODB_URI
+
+# 2. Finnhub API Key
+#    - Register at: https://finnhub.io/register
+#    - Get free API key
+#    - Add to .env as NEXT_PUBLIC_FINNHUB_API_KEY
+
+# 3. Gemini AI API Key
+#    - Go to: https://aistudio.google.com
+#    - Create API key
+#    - Add to .env as GEMINI_API_KEY
+
+# 4. Gmail Account (for Nodemailer)
+#    - Enable 2-Factor Authentication
+#    - Generate App Password
+#    - Add to .env as NODEMAILER_EMAIL and NODEMAILER_PASSWORD
+
+# 5. Better Auth Secret
+#    - Generate random 32-character string
+#    - Add to .env as BETTER_AUTH_SECRET
+
+# 6. Inngest Account
+#    - Sign up at: https://www.inngest.com
+#    - Create new app
+#    - Configure webhook: https://yourdomain.com/api/inngest
+#    - Run dev server: npx inngest-cli@latest dev
+
+
+# ============================================
+# ENVIRONMENT VARIABLES (.env)
+# ============================================
+
+# NODE_ENV=development
+# NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+# NEXT_PUBLIC_FINNHUB_API_KEY=your_finnhub_api_key
+# FINNHUB_BASE_URL=https://finnhub.io/api/v1
+
+# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/signalist
+
+# BETTER_AUTH_SECRET=your_32_char_random_secret
+# BETTER_AUTH_URL=http://localhost:3000
+
+# GEMINI_API_KEY=your_gemini_api_key
+
+# NODEMAILER_EMAIL=your-email@gmail.com
+# NODEMAILER_PASSWORD=your-app-specific-password
+
+
+# ============================================
+# PRODUCTION DEPLOYMENT
+# ============================================
+
+# Recommended Platforms:
+# - Vercel (https://vercel.com) - Automatic deployment from GitHub
+# - Netlify (https://netlify.com) - Similar to Vercel
+# - Railway (https://railway.app) - Simple deployment with Docker
+# - AWS Amplify (https://aws.amazon.com/amplify) - AWS-hosted
+
+# Deployment Steps:
+# 1. Push code to GitHub
+# 2. Connect repository to hosting platform
+# 3. Add environment variables
+# 4. Deploy (automatic build & start)
+
+
+# ============================================
+# TROUBLESHOOTING
+# ============================================
+
+# Issue: "Cannot find module..."
+# Solution: Delete node_modules and package-lock.json, then run npm install
+
+# Issue: MongoDB connection failed
+# Solution: Check MONGODB_URI, whitelist IP address in MongoDB Atlas
+
+# Issue: Finnhub API limit exceeded
+# Solution: Wait for rate limit reset (1 minute), or upgrade plan
+
+# Issue: Email not sending
+# Solution: Verify Gmail App Password, check NODEMAILER credentials
+
+# Issue: Build errors with TypeScript
+# Solution: Check tsconfig.json, ensure all types are installed
+
+# Issue: Inngest functions not running
+# Solution: Start Inngest dev server: npx inngest-cli@latest dev
+
+
+# ============================================
+# SUPPORT & RESOURCES
+# ============================================
+
+# Documentation: See PROJECT_DOCUMENTATION.md
+# Setup Guide: See SETUP_GUIDE.md
+# YouTube Tutorial: https://youtu.be/gu4pafNCXng
+# Discord Community: https://discord.com/invite/n6EdbFJ
+# GitHub Repository: https://github.com/adrianhajdin/signalist_stock-tracker-app
+
+
+# Last Updated: January 2025
+# Version: 1.0.0
